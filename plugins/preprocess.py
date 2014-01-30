@@ -172,7 +172,7 @@ if os.path.exists('%s/analysis' % options.workdir):
     commands.append('cd %s; rm -rf analysis' % options.workdir)
 if options.analysis == 'mle':
     commands.append('cp %s/utils/utils.py %s' % (os.environ['THETA_DRIVER_PATH'], options.workdir))
-commands.append('cd %s; %s/utils/theta-auto.py analysis.py' % (options.workdir, os.environ['THETA_PATH']))
+commands.append('cd %s; %s/utils2/theta-auto.py analysis.py' % (options.workdir, os.environ['THETA_PATH']))
 
 if not analysis in ['summary', 'mle', 'expected_asymptotic', 'observed_asymptotic']: 
     commands = commands + [
